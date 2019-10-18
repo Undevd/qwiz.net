@@ -1,0 +1,21 @@
+<h2>Lobby</h2>
+
+<ul class="messages">
+    <li *ngFor="let message of messages">
+        <span class="badge">{{message.username}}</span>: {{message.message}}
+    </li>
+</ul>
+
+
+
+<div>
+    <label>username: 
+        <input [(ngModel)]="username" placeholder="username" />
+    </label>
+</div>
+<div>
+    <label>message: 
+        <input [(ngModel)]="message" placeholder="message" />
+    </label>
+</div>
+<button (click)="postMessage()">post message</button>
